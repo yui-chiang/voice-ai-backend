@@ -1,4 +1,4 @@
-# voice-expense-ai-backend
+# voice-ai-backend
 
 A language-agnostic **microservice** that converts voice recordings into structured expense transactions.
 Built with FastAPI + Groq (Whisper STT + LLaMA NLP). Can be consumed by any client — Flutter, React Native, web, CLI, etc.
