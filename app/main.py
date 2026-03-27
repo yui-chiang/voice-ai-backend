@@ -9,7 +9,7 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-from services.ai_service import AIService
+from .services.ai_service import AIService
 
 load_dotenv()
 
@@ -131,4 +131,4 @@ async def process_voice_legacy(file: UploadFile = File(...)):
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))
-    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port, reload=False)
